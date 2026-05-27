@@ -1,0 +1,11 @@
+AGENTS.md
+node_modules
+.next
+.env*
+!.env.example
+.DS_Store
+npm-debug.log*
+tsconfig.tsbuildinfo
+tsconfig.typecheck.tsbuildinfo
+.codex/
+demo-assets/recordings/*.mov

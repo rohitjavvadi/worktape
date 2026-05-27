@@ -1,0 +1,3 @@
+Google Sheets tracker
+Student name | Phone | Course | Batch | Lead status | Payment status | Follow-up
+Diya Patel | +91 9988776655 | NEET | Evening | Interested | Pending | Tomorrow

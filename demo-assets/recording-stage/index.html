@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admissions Leads Sheet - Demo</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --line: #d9e1ea;
+        --ink: #152033;
+        --muted: #667085;
+        --green: #188038;
+        --blue: #1a73e8;
+        --bg: #f8fafc;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        border-bottom: 1px solid var(--line);
+        background: #fff;
+        padding: 14px 22px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .sheet-icon {
+        display: grid;
+        height: 38px;
+        width: 38px;
+        place-items: center;
+        border-radius: 8px;
+        background: var(--green);
+        color: white;
+        font-weight: 800;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      p {
+        margin: 3px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .toolbar {
+        display: flex;
+        gap: 8px;
+      }
+
+      button {
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: #fff;
+        color: #344054;
+        font-weight: 650;
+        padding: 9px 12px;
+      }
+
+      button.primary {
+        border-color: var(--blue);
+        background: var(--blue);
+        color: white;
+      }
+
+      main {
+        padding: 22px;
+      }
+
+      .formula {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: white;
+        padding: 10px 12px;
+        color: #475467;
+        font-size: 14px;
+      }
+
+      .fx {
+        border-right: 1px solid var(--line);
+        color: var(--green);
+        font-weight: 800;
+        padding-right: 12px;
+      }
+
+      table {
+        margin-top: 14px;
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        box-shadow: 0 1px 2px rgb(16 24 40 / 8%);
+      }
+
+      th,
+      td {
+        border: 1px solid var(--line);
+        min-width: 140px;
+        padding: 12px 10px;
+        text-align: left;
+      }
+
+      th {
+        background: #eef6f0;
+        color: #174a2b;
+        font-size: 13px;
+        letter-spacing: 0.01em;
+      }
+
+      td {
+        font-size: 14px;
+      }
+
+      .selected {
+        outline: 2px solid var(--blue);
+        outline-offset: -2px;
+        background: #eff6ff;
+      }
+
+      .status {
+        border-radius: 999px;
+        display: inline-flex;
+        font-size: 12px;
+        font-weight: 750;
+        padding: 4px 8px;
+      }
+
+      .new {
+        background: #e0f2fe;
+        color: #0369a1;
+      }
+
+      .pending {
+        background: #fff7ed;
+        color: #c2410c;
+      }
+
+      .confirmed {
+        background: #dcfce7;
+        color: #15803d;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <div class="sheet-icon">S</div>
+        <div>
+          <h1>Admissions Leads Sheet</h1>
+          <p>Demo data copied from WhatsApp inquiries</p>
+        </div>
+      </div>
+      <div class="toolbar">
+        <button>Filter</button>
+        <button>Share</button>
+        <button class="primary">Export CSV</button>
+      </div>
+    </header>
+    <main>
+      <div class="formula">
+        <span class="fx">fx</span>
+        <span>New lead: Ananya Rao, age 15, NEET Foundation, evening batch, payment pending</span>
+      </div>
+      <table aria-label="Admissions leads">
+        <thead>
+          <tr>
+            <th>Lead name</th>
+            <th>Phone</th>
+            <th>Course</th>
+            <th>Age</th>
+            <th>Batch</th>
+            <th>Lead status</th>
+            <th>Payment</th>
+            <th>Follow-up</th>
+            <th>Last message</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="selected">Ananya Rao</td>
+            <td>98765 43210</td>
+            <td>NEET Foundation</td>
+            <td>15</td>
+            <td>Evening</td>
+            <td><span class="status new">New lead</span></td>
+            <td><span class="status pending">Pending</span></td>
+            <td>Tomorrow 5 PM</td>
+            <td>Fee details sent on WhatsApp</td>
+          </tr>
+          <tr>
+            <td>Rahul Menon</td>
+            <td>91234 56780</td>
+            <td>JEE Crash Course</td>
+            <td>17</td>
+            <td>Weekend</td>
+            <td><span class="status confirmed">Confirmed</span></td>
+            <td><span class="status confirmed">Paid</span></td>
+            <td>Orientation call</td>
+            <td>Receipt shared</td>
+          </tr>
+          <tr>
+            <td>Maya Iyer</td>
+            <td>99887 76655</td>
+            <td>Class 10 Math</td>
+            <td>14</td>
+            <td>Morning</td>
+            <td><span class="status pending">Follow-up</span></td>
+            <td><span class="status pending">Pending</span></td>
+            <td>Today 7 PM</td>
+            <td>Asked for available batches</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,228 @@
+{
+  "workflowSummary": "A coaching institute admin qualifies admission inquiries from WhatsApp, copies details into a spreadsheet, tracks status/payment/follow-up, and sends manual reply templates.",
+  "confidence": 0.83,
+  "sourceEvidence": [
+    {
+      "frameIndex": 1,
+      "timestamp": "00:03",
+      "observation": "Incoming WhatsApp admission inquiry is visible with student details being reviewed."
+    },
+    {
+      "frameIndex": 4,
+      "timestamp": "00:14",
+      "observation": "Lead details are transferred into a spreadsheet-like tracker."
+    },
+    {
+      "frameIndex": 8,
+      "timestamp": "00:31",
+      "observation": "Admin updates status and prepares follow-up/payment message."
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Read incoming inquiry",
+      "tools": ["WhatsApp"],
+      "input": "New lead message",
+      "output": "Admission intent and contact details identified"
+    },
+    {
+      "order": 2,
+      "title": "Capture lead details",
+      "tools": ["WhatsApp", "Google Sheets"],
+      "input": "Name, phone, age, course interest, batch preference",
+      "output": "Lead row entered into tracker"
+    },
+    {
+      "order": 3,
+      "title": "Qualify the lead",
+      "tools": ["Google Sheets"],
+      "input": "Course interest and conversation context",
+      "output": "Lead status and follow-up status set"
+    },
+    {
+      "order": 4,
+      "title": "Send follow-up message",
+      "tools": ["WhatsApp"],
+      "input": "Fee details or next-step template",
+      "output": "Lead receives a consistent reply"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Lead",
+      "label": "Lead",
+      "description": "A student or parent inquiry for a coaching institute course.",
+      "fields": [
+        {
+          "name": "studentName",
+          "label": "Student name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Aarav Sharma"
+        },
+        {
+          "name": "phone",
+          "label": "Phone",
+          "type": "phone",
+          "required": true,
+          "placeholder": "+91 98765 43210"
+        },
+        {
+          "name": "age",
+          "label": "Age",
+          "type": "number",
+          "required": false,
+          "placeholder": "16"
+        },
+        {
+          "name": "course",
+          "label": "Course",
+          "type": "select",
+          "required": true,
+          "options": ["JEE", "NEET", "Foundation", "Spoken English"]
+        },
+        {
+          "name": "batchPreference",
+          "label": "Batch preference",
+          "type": "select",
+          "required": false,
+          "options": ["Morning", "Evening", "Weekend"]
+        },
+        {
+          "name": "leadStatus",
+          "label": "Lead status",
+          "type": "status",
+          "required": true,
+          "options": ["New", "Contacted", "Interested", "Confirmed", "Dropped"]
+        },
+        {
+          "name": "paymentStatus",
+          "label": "Payment status",
+          "type": "status",
+          "required": true,
+          "options": ["Not sent", "Pending", "Paid"]
+        },
+        {
+          "name": "followUpStatus",
+          "label": "Follow-up",
+          "type": "status",
+          "required": true,
+          "options": ["Today", "Tomorrow", "Done", "No reply"]
+        },
+        {
+          "name": "notes",
+          "label": "Notes",
+          "type": "textarea",
+          "required": false,
+          "placeholder": "Parent asked for evening batch fee details."
+        }
+      ]
+    }
+  ],
+  "statuses": [
+    {
+      "name": "leadStatus",
+      "label": "Lead status",
+      "values": ["New", "Contacted", "Interested", "Confirmed", "Dropped"]
+    },
+    {
+      "name": "paymentStatus",
+      "label": "Payment status",
+      "values": ["Not sent", "Pending", "Paid"]
+    },
+    {
+      "name": "followUpStatus",
+      "label": "Follow-up",
+      "values": ["Today", "Tomorrow", "Done", "No reply"]
+    }
+  ],
+  "actions": [
+    "createRecord",
+    "updateStatus",
+    "copyMessageTemplate",
+    "exportCsv"
+  ],
+  "painPoints": [
+    "Lead details are copied manually between WhatsApp and spreadsheets.",
+    "Follow-up and payment statuses can be missed when many inquiries arrive.",
+    "Repeated WhatsApp replies are typed or copied one by one."
+  ],
+  "messageTemplates": [
+    {
+      "name": "First reply",
+      "body": "Hi {{studentName}}, thanks for your interest in {{course}}. Can you confirm your preferred batch timing?"
+    },
+    {
+      "name": "Fee details",
+      "body": "Hi {{studentName}}, the fee details for {{course}} are ready. We can share the payment link once you confirm the batch."
+    },
+    {
+      "name": "Follow-up reminder",
+      "body": "Hi {{studentName}}, just checking if you would like to confirm your {{course}} admission for the upcoming batch."
+    }
+  ],
+  "screens": [
+    {
+      "name": "Lead intake",
+      "type": "form",
+      "entity": "Lead",
+      "description": "Capture a new inquiry without switching to a spreadsheet."
+    },
+    {
+      "name": "Admissions dashboard",
+      "type": "table",
+      "entity": "Lead",
+      "description": "Track lead, payment, and follow-up status in one place."
+    },
+    {
+      "name": "WhatsApp templates",
+      "type": "templates",
+      "entity": "Lead",
+      "description": "Copy consistent messages for common follow-ups."
+    }
+  ],
+  "validationRules": [
+    {
+      "field": "studentName",
+      "rule": "required",
+      "message": "Student name is required."
+    },
+    {
+      "field": "phone",
+      "rule": "required",
+      "message": "Phone number is required."
+    },
+    {
+      "field": "course",
+      "rule": "required",
+      "message": "Course is required."
+    }
+  ],
+  "exportRequirements": {
+    "format": "csv",
+    "entities": ["Lead"]
+  },
+  "clarifyingQuestions": [
+    {
+      "id": "lead_statuses",
+      "question": "What lead statuses should this tool use?",
+      "defaultAnswer": "New, Contacted, Interested, Confirmed, Dropped"
+    },
+    {
+      "id": "required_fields",
+      "question": "Which fields are required before saving a lead?",
+      "defaultAnswer": "Student name, phone, and course"
+    },
+    {
+      "id": "payment_tracking",
+      "question": "Do you need payment tracking in this tool?",
+      "defaultAnswer": "Yes, track Not sent, Pending, and Paid"
+    },
+    {
+      "id": "message_templates",
+      "question": "Which WhatsApp messages do you send most often?",
+      "defaultAnswer": "First reply, fee details, and follow-up reminder"
+    }
+  ]
+}

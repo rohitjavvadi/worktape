@@ -1,0 +1,50 @@
+[
+  {
+    "id": "lead-001",
+    "entity": "Lead",
+    "createdAt": "2026-05-26T09:00:00.000Z",
+    "values": {
+      "studentName": "Aarav Sharma",
+      "phone": "+91 98765 43210",
+      "age": 16,
+      "course": "JEE",
+      "batchPreference": "Evening",
+      "leadStatus": "Interested",
+      "paymentStatus": "Pending",
+      "followUpStatus": "Today",
+      "notes": "Parent asked for fee details and weekend option."
+    }
+  },
+  {
+    "id": "lead-002",
+    "entity": "Lead",
+    "createdAt": "2026-05-26T09:20:00.000Z",
+    "values": {
+      "studentName": "Diya Patel",
+      "phone": "+91 99887 77665",
+      "age": 15,
+      "course": "NEET",
+      "batchPreference": "Morning",
+      "leadStatus": "Contacted",
+      "paymentStatus": "Not sent",
+      "followUpStatus": "Tomorrow",
+      "notes": "Wants a trial class before confirming."
+    }
+  },
+  {
+    "id": "lead-003",
+    "entity": "Lead",
+    "createdAt": "2026-05-26T09:45:00.000Z",
+    "values": {
+      "studentName": "Kabir Rao",
+      "phone": "+91 91234 56780",
+      "age": 13,
+      "course": "Foundation",
+      "batchPreference": "Weekend",
+      "leadStatus": "Confirmed",
+      "paymentStatus": "Paid",
+      "followUpStatus": "Done",
+      "notes": "Confirmed for Saturday batch."
+    }
+  }
+]

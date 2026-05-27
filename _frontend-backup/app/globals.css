@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f7f8fb;
+  color: #101828;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.worktape-progress {
+  animation: worktape-progress 1.35s ease-in-out infinite;
+  transform-origin: left center;
+}
+
+@keyframes worktape-progress {
+  0% {
+    transform: translateX(-70%) scaleX(0.45);
+  }
+  50% {
+    transform: translateX(65%) scaleX(1.15);
+  }
+  100% {
+    transform: translateX(185%) scaleX(0.45);
+  }
+}
