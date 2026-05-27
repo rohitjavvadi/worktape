@@ -9,3 +9,5 @@ tsconfig.tsbuildinfo
 tsconfig.typecheck.tsbuildinfo
 .codex/
 demo-assets/recordings/*.mov
+
+_frontend-backup/
