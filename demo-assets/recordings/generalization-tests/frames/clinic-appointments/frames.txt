@@ -1,0 +1,9 @@
+file '/Users/rohitjavvadi/Documents/worktape/demo-assets/recordings/generalization-tests/frames/clinic-appointments/frame-01.svg.png'
+duration 2.25
+file '/Users/rohitjavvadi/Documents/worktape/demo-assets/recordings/generalization-tests/frames/clinic-appointments/frame-02.svg.png'
+duration 2.25
+file '/Users/rohitjavvadi/Documents/worktape/demo-assets/recordings/generalization-tests/frames/clinic-appointments/frame-03.svg.png'
+duration 2.25
+file '/Users/rohitjavvadi/Documents/worktape/demo-assets/recordings/generalization-tests/frames/clinic-appointments/frame-04.svg.png'
+duration 2.25
+file '/Users/rohitjavvadi/Documents/worktape/demo-assets/recordings/generalization-tests/frames/clinic-appointments/frame-04.svg.png'

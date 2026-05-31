@@ -38,6 +38,8 @@ WhatsApp/lead management + spreadsheet tracking -> admissions CRM
 - OpenAI vision model returns structured workflow JSON.
 - Clarifying answers are merged into the final spec.
 - Generated CRM can add records, update statuses, copy message templates, and export CSV.
+- Wednesday evidence screenshots are captured in `demo-assets/screenshots/wednesday-checkpoint/`.
+- Current live backend smoke test: `admissions-workflow-test.mp4` returned `mode=live-ai`, 3 frames, 4 steps, 1 entity, 9 fields, confidence `0.92`.
 
 Build-in-public post:
 
@@ -71,6 +73,6 @@ https://x.com/rohitj997/status/2059455370859618422
 
 - Deploy the app to a public URL.
 - Record the deterministic 60-90 second demo flow.
-- Add final screenshots and validation notes.
+- Add validation notes from real target-user conversations.
 - Tighten the product narrative around: "the recording is the spec."
 - Keep improving the generated CRM while avoiding scope creep.

@@ -1,0 +1,9 @@
+file '/Users/rohitjavvadi/Documents/worktape/demo-assets/recordings/generalization-tests/frames/repair-service-tickets/frame-01.svg.png'
+duration 2.25
+file '/Users/rohitjavvadi/Documents/worktape/demo-assets/recordings/generalization-tests/frames/repair-service-tickets/frame-02.svg.png'
+duration 2.25
+file '/Users/rohitjavvadi/Documents/worktape/demo-assets/recordings/generalization-tests/frames/repair-service-tickets/frame-03.svg.png'
+duration 2.25
+file '/Users/rohitjavvadi/Documents/worktape/demo-assets/recordings/generalization-tests/frames/repair-service-tickets/frame-04.svg.png'
+duration 2.25
+file '/Users/rohitjavvadi/Documents/worktape/demo-assets/recordings/generalization-tests/frames/repair-service-tickets/frame-04.svg.png'

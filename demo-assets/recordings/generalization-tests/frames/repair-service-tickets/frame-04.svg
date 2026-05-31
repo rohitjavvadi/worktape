@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" rx="0" fill="#f8fafc"/>
+  <rect x="36" y="32" width="1208" height="656" rx="28" fill="#ffffff" stroke="#d8e0ea" stroke-width="2"/>
+  <rect x="36" y="32" width="1208" height="86" rx="28" fill="#0f172a"/>
+  <circle cx="82" cy="75" r="10" fill="#ef4444"/>
+  <circle cx="112" cy="75" r="10" fill="#f59e0b"/>
+  <circle cx="142" cy="75" r="10" fill="#10b981"/>
+  <text x="184" y="84" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" fill="#ffffff">Repair service ticket workflow</text>
+  <text x="1040" y="84" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#cbd5e1">Frame 4</text>
+  <rect x="70" y="152" width="520" height="474" rx="22" fill="#f8fafc" stroke="#d8e0ea"/>
+  <rect x="634" y="152" width="574" height="474" rx="22" fill="#f8fafc" stroke="#d8e0ea"/>
+  <rect x="94" y="178" width="180" height="44" rx="12" fill="#d97706"/>
+  <text x="114" y="207" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#ffffff">Service sheet</text>
+  <text x="94" y="270" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800" fill="#111827">Close ticket after visit</text>
+  <text x="94" y="340" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700" fill="#111827">Status: Completed</text>
+<text x="94" y="383" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="500" fill="#111827">Charge: Rs 950</text>
+<text x="94" y="426" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="500" fill="#111827">Payment: Cash received</text>
+<text x="94" y="469" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="500" fill="#111827">Notes: pipe replaced</text>
+  <text x="666" y="214" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#111827">Observed data and actions</text>
+  <text x="666" y="282" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#111827">Need CSV export</text>
+<text x="666" y="326" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500" fill="#111827">Payment status</text>
+<text x="666" y="370" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500" fill="#111827">Service notes</text>
+  <rect x="666" y="556" width="500" height="44" rx="12" fill="#ecfeff" stroke="#bae6fd"/>
+  <text x="690" y="586" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0369a1">This repeated work should become a small internal tool</text>
+</svg>

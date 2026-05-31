@@ -1,0 +1,19 @@
+Task mode: create
+Primary deck profile: product-platform
+Required checkpoint slides:
+1. Problem / pain point
+2. Proposed solution and key features
+3. Tools / tech stack
+4. ICP / target audience
+
+Product guardrails:
+- Keep "the recording is the spec" as the center of the story.
+- Do not position WorkTape as a generic prompt-to-app builder.
+- Show the before/after transformation from manual workflow to generated internal tool.
+- Be honest: video analysis is real; fallback sample is only for demo reliability.
+
+Design system:
+- 16:9 1280x720 editable deck.
+- Light operational product feel, not a landing page.
+- Palette: ink #0B1120, slate #475569, line #D7E0EA, canvas #F6F8FB, signal #0D9D6E, cobalt #2563EB, warm #F59E0B.
+- Typography: Aptos/Aptos Display fallback through artifact-tool.

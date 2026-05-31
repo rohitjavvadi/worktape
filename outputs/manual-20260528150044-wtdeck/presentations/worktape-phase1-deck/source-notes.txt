@@ -1,0 +1,6 @@
+Sources:
+- AGENTS.md in /Users/rohitjavvadi/Documents/worktape for product positioning, guardrails, demo workflow, and Codex usage expectations.
+- docs/hackathon-faq.md for Phase 1 checkpoint requirements.
+- Existing WorkTape MVP implementation details from local project: Next.js, ffmpeg frame extraction, OpenAI Responses API, structured WorkflowSpec, spec-driven generated CRM, Cloudflare Tunnel.
+
+No external facts or fabricated user validation claims are used in this deck.

@@ -34,7 +34,9 @@ Yes. The UI distinguishes `Live AI analysis` from `Saved analysis fallback` and 
 
 ## 9. Was the OpenAI model path tested?
 
-Yes, with nuance. With an API key provided only as a local process environment variable, a direct `gpt-5.5` + high reasoning smoke test returned successfully. The previous model path returned `mode=live-ai`, extracted frames, and produced a structured `Lead` workflow spec. After switching the full video route to `gpt-5.5` with high reasoning, the realistic admissions test video reached the model but timed out at 90 seconds and safely returned the labeled fallback spec. This is a demo reliability risk to revisit before Friday.
+Yes. On 2026-05-27, with `OPENAI_API_KEY` configured locally, multipart upload of `demo-assets/recordings/admissions-workflow-test.mp4` to `/api/analyze-recording` returned `mode=live-ai`, 3 frames, 4 workflow steps, 1 entity, 9 fields, and confidence `0.92`.
+
+The longer real `.mov` recording remains slower and should be treated as supporting evidence, not the only deterministic Wednesday demo path.
 
 ## Remaining caution
 

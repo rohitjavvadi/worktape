@@ -1,0 +1,13 @@
+WorkTape turns a screen recording of repetitive business work into a working internal tool.
+
+Small businesses already know their work, but they often cannot write a product spec. They manage leads, appointments, invoices, and service tickets across chats, spreadsheets, and manual follow ups.
+
+WorkTape starts where they are. The user uploads a workflow recording. The backend extracts key frames with ffmpeg, sends those frames to an OpenAI vision model, and receives a strict JSON workflow spec.
+
+That spec captures the steps, business objects, fields, statuses, actions, message templates, screens, validation rules, and clarifying questions.
+
+The generated app is rendered from that spec. For the hackathon wedge, the clean demo is WhatsApp or chat plus spreadsheet work becoming a small admissions or lead-management CRM.
+
+Today I also tested three other workflows: clinic appointments, invoice collections, and repair service tickets. All three returned live AI specs, not fallback specs. That means the architecture is beginning to generalize, while the final claim should still stay honest: this is a strong MVP path, not proof that every random video generates every kind of app.
+
+For the final Sunday demo, the proof is simple. Show the manual workflow, upload the recording, show WorkTape extracting the spec, answer the clarifying questions, then open the live generated CRM and use it.
